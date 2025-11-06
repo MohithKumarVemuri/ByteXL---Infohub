@@ -1,0 +1,94 @@
+/* src/index.css — replace whole file with this (no @apply usage) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Global variables --- */
+:root{
+  --brand: #5b21b6; /* indigo */
+  --muted: #6b7280;
+  --card-bg: #f1f5ff;
+  --bg: #f8fafc; /* tailwind bg-gray-50 */
+  --text: #111827; /* tailwind gray-800 */
+}
+
+/* base page */
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* header */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.app-title {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 800;
+}
+.app-sub {
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* nav pill container */
+.nav-pill-container {
+  max-width: 48rem; /* 768px */
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+  align-items: center;
+  justify-content: center;
+}
+
+/* pill active/inactive */
+.pill-active {
+  background: var(--brand);
+  color: white;
+  box-shadow: 0 10px 20px rgba(99,102,241,0.12);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+}
+.pill-inactive {
+  background: rgba(99,102,241,0.08);
+  color: #3730a3;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+}
+
+/* card baseline */
+.hub-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.03);
+}
+
+/* stat box */
+.stat-box {
+  background: linear-gradient(180deg, rgba(241,245,255,1), rgba(237,242,255,1));
+  border-left: 6px solid rgba(99,102,241,1);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+/* wrapper widths */
+.main-wrapper { max-width: 64rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+
+/* small helpers */
+.text-muted { color: var(--muted); }
